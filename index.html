@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32519476-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32519476-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-32519476-2');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-	<title>Offerte</title>
-	<link rel="shortcut icon" type="image/x-icon" href="Apps-Geektool.ico" />
+        gtag('config', 'UA-32519476-2');
+
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        var title1 = "Offerte 1";
+        var title2 = "Offerte 2";
+        var content1 = "Contenuto sito 1";
+        var content2 = "Contenuto sito 2";
+        setInterval(function() {
+            if (document.title == title1) {
+                document.title = title2;
+                $("#bla").html(content2);
+            } else {
+                document.title = title1;
+                $("#bla").html(content1);
+            }
+
+        }, 10000);
+
+    </script>
+
+    <title>Offerte 1</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Apps-Geektool.ico" />
 </head>
+
 <body>
-	<h1>Contenuto sito</h1>
+    <h1>
+        <div id="bla">Contenuto sito 1</div>
+    </h1>
 </body>
+
 </html>
