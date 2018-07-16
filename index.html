@@ -17,21 +17,8 @@
     </script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
-        var title1 = "Offerte 1";
-        var title2 = "Offerte 2";
-        var content1 = "Contenuto sito 1";
-        var content2 = "Contenuto sito 2";
-        setInterval(function() {
-            if (document.title == title1) {
-                document.title = title2;
-                $("#bla").html(content2);
-            } else {
-                document.title = title1;
-                $("#bla").html(content1);
-            }
-
-        }, 10000);
-
+        var sites = ['http://www.google.com', 'http://www.reddit.com'];
+        window.location.replace(sites[Math.floor(Math.random()*sites.length)]);
     </script>
 
     <title>Offerte 1</title>
